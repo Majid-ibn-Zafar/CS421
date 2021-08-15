@@ -1,0 +1,5 @@
+VirtualBox VMs/
+.vagrant/
+*.pyc
+*/venv/*
+CS421/

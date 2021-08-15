@@ -1,0 +1,152 @@
+body {
+    background: #f9e933;
+    font-family: 'droid-sans', sans-serif;
+    font: 100%;
+}
+
+header, main, footer {
+    min-width: 855px;
+}
+
+header .container, main .container, footer .container {
+    max-width: 855px;
+    margin: auto;
+}
+
+header {
+    background: white;
+    overflow: auto;
+}
+
+header h1 {
+    float: left;
+    width: 570px;
+    font-size: 275%;
+    font-style: italic;
+    padding: 30px;
+    color: #a52a2a;
+    position: relative; right: 31px;
+}
+
+header nav {
+    float: right;
+    width: 420px;
+    position: relative;top: 25px;
+}
+
+header nav a:link {
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background: white;
+}
+
+.tabs a span {
+    border-radius: 5px 5px 0 0;
+    display: inline-block;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
+}
+
+.tabs a .active {
+    background: #eee;
+}
+
+a {
+    color: #a52a2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main .content {
+    padding: 30px 10px 30px 10px;
+    border-radius: 0 5px 5px 5px;
+    background: #eee;
+}
+
+main h2 {
+    font-size: 200%;
+    position: relative; top: 30px;
+}
+
+main p {
+    position: relative; top: 40px;
+    font-size: 93%;
+}
+
+main h3 {
+    font-size: 132%;
+    position: relative; top: 70px;
+}
+
+.tabs a span {
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    width: 100px;
+    margin-right: 10px;
+    text-align: center;
+    background: #ddd;
+    padding: 5px;
+}
+   
+.tabs a span.active {
+    background: #eee;
+}
+   
+
+main ul {
+    font-size: 150%;
+}
+
+img {
+    margin-left: 585px;
+    position: relative; bottom: 135px; left: 75px;
+}
+
+footer  {
+    margin: 0px 0px 200px 0px;
+}
+
+footer .sitemap {
+    float: right;
+    width: 270px;
+    position: relative; bottom: 65px;
+}
+
+footer .contact h5 {
+    font-size: 140%;
+    position: relative; top: 55px;
+}
+
+footer .sitemap h5 {
+    font-size: 140%;
+    position: relative; top: 25px;
+}
+
+footer p {
+    font-size: 105%;
+    position: relative; top: 80px;
+    line-height: 1.5;
+}
+
+footer ul {
+    position: relative; top: 50px;
+    line-height: 1.5;
+}
+
+footer li:hover {
+    text-decoration: underline;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'ubuntu';
+}

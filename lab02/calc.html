@@ -1,0 +1,116 @@
+<html lang="en">   
+    <head>
+        <title>Majid's Calculator</title>
+        <meta charset="UTF-8">
+        <meta name = "keywords" content = "HTML, CSS, Javascript, Calculator, Math, Numbers">
+        <meta name = "description" content = "Majid's Calculator">
+        <meta name = "author" content = "Majid Ali">
+        <meta http-equiv="refresh" content = "5:00">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        .background {
+            background-color: #404040;
+            color: white;
+            width: 322px;
+            height: 310px;
+            margin: auto;
+            margin-top: 50px;
+            border-style: none;
+        }
+
+        html, body {
+            background-color: grey;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+        }
+        #res {
+            width: 238px; 
+            height: 45px; 
+            background-color: white; 
+            color: black;
+            text-align: right;
+            font-size: 200%;
+        }
+
+        input {
+            background-color: #686868;
+            color: white;
+            margin: 5px 0px 0px 2px;
+            width: 75px;
+            height: 45px;
+            border-style: none;
+            font-size: 120%;
+            text-align: center;
+        }
+
+        input:hover {
+            background-color: #a0a0a0;
+        }
+        
+    </style>
+    <body>
+        <h2>Majid's Calculator</h2>
+        <div class="background">
+            <form name="calc">
+                <input id = "res">
+                <input type="button" value="c" onclick="document.getElementById('res').value=''"><br>
+
+                <input type="button" value="+" onclick="showDisplay('+')">
+                <input type="button" value="/" onclick="showDisplay('/')">
+                <input type="button" value="*" onclick="showDisplay('*')">
+                <input type="button" value="-" onclick="showDisplay('-')"><br>
+
+                <input type="button" value="7" onclick="showDisplay('7')">
+                <input type="button" value="8" onclick="showDisplay('8')">
+                <input type="button" value="9" onclick="showDisplay('9')">
+                <input type="button" value="√" onclick="solveSquare()"><br>
+
+                <input type="button" value="4" onclick="showDisplay('4')">
+                <input type="button" value="5" onclick="showDisplay('5')">
+                <input type="button" value="6" onclick="showDisplay('6')">
+                <input type="button" value="x²" onclick="solvePower()"><br>
+
+                <input type="button" value="1" onclick="showDisplay('1')">
+                <input type="button" value="2" onclick="showDisplay('2')">
+                <input type="button" value="3" onclick="showDisplay('3')">
+                <input type="button" value="=" onclick="solveDisplay()"><br>
+
+                <input type="button" value="0" onclick="showDisplay('0')">
+                <input type="button" value="." onclick="showDisplay('.')">
+                
+            </form>
+        </div>  
+                <!--I use the eval() global function to make the calculations easier-->
+                <!--Each function below I set the variable to the desired value I want, 
+                    then place it back to where its pointing originally.-->
+        <script>    
+            function showDisplay(num) {
+                document.getElementById("res").value = document.getElementById("res").value + num
+            }
+            
+            function solveDisplay() {
+                x = eval(document.getElementById("res").value)      
+                document.getElementById("res").value = x
+            } 
+
+            function solveSquare() {
+                x = Math.sqrt(document.getElementById("res").value)
+                document.getElementById("res").value = x
+                
+            }
+
+            function solvePower() {
+                x = document.getElementById("res").value * document.getElementById("res").value
+                document.getElementById("res").value = x
+            }
+        </script>
+    </body>
+</html>

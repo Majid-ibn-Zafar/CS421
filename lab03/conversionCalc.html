@@ -1,0 +1,103 @@
+<html lang="en">
+    <head>
+        <title>Majid's Conversion Calculator</title>
+        <meta charset="UTF-8">
+        <meta name = "keywords" content = "HTML, CSS, Javascript, Conversion Calculator, Math, Numbers">
+        <meta name = "description" content = "Majid's Conversion Calculator">
+        <meta name = "author" content = "Majid Ali">
+        <meta http-equiv="refresh" content = "5:00">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        html, body {
+            text-align: center;
+            margin: 0;
+            margin-top: 25px;
+        }
+
+        .container {
+            background: lightgray;
+            height: 360px;
+            width: 350px;
+            padding: 0px;
+            border-style: none;
+            border-radius: 8px;
+        }
+
+        #result {
+            width: 200px;
+            height: 35px;
+            padding-bottom: 20px;
+            text-align: center;
+            font-size: 120%;
+        }
+
+        input {
+            margin: 15px 0px 0px 0px;
+        }
+
+        .row {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+    </style>
+    <body>
+        <h2>Majid's Conversion Calculator</h2>
+        <div class="container">
+            <form name="conversionCalc">
+                <input id="result">
+                <input type="button" value="c" class="btn btn-dark" onclick="document.getElementById('result').value=''"><br>
+
+                <div class="row">
+                    <div class="btn btn-dark">
+                        <input type="button" value="kg to lbs" class="btn btn-dark" style="width: 80px;" onclick="kgtoLBS()">
+                        <input type="button" value="km to mi" class="btn btn-dark" style="width: 80px;" onclick="kmtoMI()">
+                        <input type="button" value="°F to °C" class="btn btn-dark" style="width: 80px;" onclick="FtoC()"><br>
+                    </div>
+                </div>
+                
+                <input type="button" value="7" class="btn btn-dark" style="width: 80px;" onclick="numInput('7')">
+                <input type="button" value="8" class="btn btn-dark" style="width: 80px;" onclick="numInput('8')">
+                <input type="button" value="9" class="btn btn-dark" style="width: 80px;" onclick="numInput('9')"><br>
+
+                <input type="button" value="4" class="btn btn-dark" style="width: 80px;" onclick="numInput('4')">
+                <input type="button" value="5" class="btn btn-dark" style="width: 80px;" onclick="numInput('5')">
+                <input type="button" value="6" class="btn btn-dark" style="width: 80px;" onclick="numInput('6')"><br>
+
+                <input type="button" value="1" class="btn btn-dark" style="width: 80px;" onclick="numInput('1')">
+                <input type="button" value="2" class="btn btn-dark" style="width: 80px;" onclick="numInput('2')">
+                <input type="button" value="3" class="btn btn-dark" style="width: 80px;" onclick="numInput('3')"><br>
+
+                <input type="button" value="0" class="btn btn-dark" style="width: 80px;" onclick="numInput('0')">
+                <input type="button" value="." class="btn btn-dark" style="width: 80px;" onclick="numInput('.')"><br><br>
+            </form>
+        </div>
+        <script>
+            function numInput(num) {
+                document.getElementById('result').value += num
+            }
+
+            function kgtoLBS() {
+                x = document.getElementById('result').value 
+                y = x * 2.20462262185
+                document.getElementById('result').value = y
+            }
+
+            function kmtoMI() {
+                x = document.getElementById('result').value 
+                y = x/1.609344
+                document.getElementById('result').value = y
+            }
+
+            function FtoC() {
+                x = document.getElementById('result').value 
+                y = (x - 32) * 5/9
+                document.getElementById('result').value = y
+            }
+            
+        </script>
+    </body>
+</html>

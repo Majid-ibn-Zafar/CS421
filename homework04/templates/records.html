@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>records.html</title>
+        <meta charset="utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>   
+    </head>
+    <style>
+        .container-fluid {
+            background-color: rgb(238, 225, 109);
+        }
+    </style>
+    <body>
+        <div class="container-fluid">
+            <table id="recordtable" class="table table-striped">
+                <h2>Company Records</h2>
+                <tr>
+                    <th>company id</th>
+                    <th>company name</th>
+                    <th>email</th>
+                    <th>phone number</th>
+                    <th>address</th>
+                </tr>
+
+                {% for company in list_records %}
+
+                <tr>
+                    <td>{{company.identification}}</td>
+                    <td>{{company.companyname}}</td>
+                    <td>{{company.email}}</td>
+                    <td>{{company.phone}}</td>
+                    <td>{{company.address}}</td>
+                </tr>
+
+                {% endfor %}
+
+            </table>
+        </div>
+    </body>
+</html>
